@@ -19,14 +19,14 @@ KOALA itself is a service that is able to run inside the public cloud platform (
 
 # Publications
 
-- **The KOALA Cloud Manager - Cloud Service Management the Easy Way**. *Christian Baun, Marcel Kunze, Viktor Mauch*. Proceedings of the IEEE Cloud 2011 4th International Conference on Cloud Computing in Washington. ISBN:978-0-7695-4460-1
-- **The KOALA Cloud Management Service - A Modern Approach for Cloud Infrastructure Management**. *Christian Baun, Marcel Kunze*. Proceedings of the 1st International Workshop on Cloud Computing Platforms (CloudCP) that was part of the EuroSys 2011 in Salzburg. The Association for Computing Machinery (ACM). ISBN:978-1-4503-0727-7
+- **The KOALA Cloud Manager - Cloud Service Management the Easy Way**. *Christian Baun, Marcel Kunze, Viktor Mauch*. Proceedings of the [IEEE Cloud 2011](http://www.thecloudcomputing.org/2011/index.html) 4th International Conference on Cloud Computing in Washington. ISBN:978-0-7695-4460-1
+- **The KOALA Cloud Management Service - A Modern Approach for Cloud Infrastructure Management**. *Christian Baun, Marcel Kunze*. Proceedings of the 1st International Workshop on Cloud Computing Platforms ([CloudCP](http://www.wikibench.eu/CloudCP/)) that was part of the [EuroSys 2011](http://eurosys2011.cs.uni-salzburg.at) in Salzburg. The Association for Computing Machinery (ACM). ISBN:978-1-4503-0727-7
 
 # How do I get started?
 
 The Wiki tab provides instructions on how to use KOALA that runs as a service inside the Google App Engine with the most popular Cloud Services and how to install KOALA inside a Private Cloud PaaS.
 
-Web site of KOALA: [http://koalacloud.appspot.com](http://koalacloud.appspot.com)
+**Web site of KOALA**: [http://koalacloud.appspot.com](http://koalacloud.appspot.com)
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/S8pGPm-vSTk/0.jpg)](http://www.youtube.com/watch?v=S8pGPm-vSTk)
 
