@@ -11,6 +11,8 @@ KOALA helps interacting with cloud services that implement the APIs of
 
 With KOALA the users can start, stop and monitor their instances, volumes and elastic IP addresses. They can also create and erase buckets inside the S3-compatible storage services S3, Google Storage and Walrus. It's easy to upload, check and modify data that is stored inside these storage services, the same way it can be done with [S3Fox](http://www.s3fox.net) and the [Google Storage Manager](https://sandbox.google.com/storage/).
 
+![KOALA](bilder/KOALA_zusammenhang_kompakt5.png)
+
 KOALA itself is a service that is able to run inside the public cloud platform (PaaS) [Google App Engine](http://appengine.google.com) and inside Private Cloud platforms with [AppScale](https://github.com/AppScale/appscale) or [typhoonAE](http://code.google.com/p/typhoonae/).
 
 **A customized version for Android and iPhone/iPod touch devices is included.**
