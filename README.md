@@ -28,3 +28,13 @@ Web site of KOALA: [http://koalacloud.appspot.com](http://koalacloud.appspot.com
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/S8pGPm-vSTk/0.jpg)](http://www.youtube.com/watch?v=S8pGPm-vSTk)
 
+# Reason for the Development and Design Decisions
+
+All existing tools to work with cloud services face several advantages and drawbacks.
+
+- Online tools (software services) like the [http://aws.amazon.com/console/](AWS Management Console) and the [https://console.cloud.google.com](Google Cloud Console) are in line with just the cloud service offerings of the company. It is currently not foreseen to configure it in a way to e.g. work with services from an Eucalyptus private cloud infrastructure. [http://www.ylastic.com](Ylastic) offers support for most AWS cloud services and Eucalyptus infrastructures but it is not possible to work with other compatible infrastructures e.g. Nimbus. As the access keys are stored with the provider, the customer also has to trust the provider of the management tool regarding privacy and availability.
+- Firefox browser extensions like [https://sourceforge.net/projects/elasticfox/](ElasticFox),[[http://code.google.com/p/hybridfox/](Hybridfox) and [http://www.s3fox.net](S3Fox) only work with the Firefox browser and not e.g. Internet Explorer, Opera, Google Chrome or Safari. The customers have to install and maintain the management tool on their local computer, a fact that somehow does not reflect the cloud paradigm very well.
+- Command-line tools like the AWS tools offered by Amazon only support the AWS public cloud offerings. The [https://github.com/eucalyptus/euca2ools](Euca2ools) from the Eucalyptus project and [https://cloud.google.com/storage/docs/gsutil](GSUtil) from Google support both, public and private cloud services. They require a local installation and lack ease of use as they implement no graphical user interface (GUI).
+- Locally installed applications with a GUI like [http://www.elasticwolf.com](ElasticWolf), [https://github.com/neillturner/ec2dream](EC2Dream), [http://www.gladinet.com](Gladinet Cloud Desktop) and [https://cyberduck.io](Cyberduck) provide a better level of usability compared to command-line tools but not all applications run with every operating system and they require a local installation.
+
+In order to improve the situation, KOALA has been developed as a flexible and open solution to satisfy all needs for the daily work with cloud services that comply to the AWS API.
