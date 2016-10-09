@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+Sind sie ganz sicher, dass Sie <b>alle</b> Ihre Instanzen beenden wollen?
+
+<table border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td align="center">
+<form action="/alle_instanzen_beenden_definitiv" method="get">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="submit" value="Ja! Alle Instanzen beenden">
+</form>
+</td>
+<td align="center">
+<form action="/instanzen" method="get">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="submit" value="Nein">
+</form>
+</td>
+</tr>
+</table>
+
+{% endblock %}

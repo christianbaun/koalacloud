@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/create_load_balancer" method="get" accept-charset="utf-8">
+<input type="submit" value="create new elastic load balancer">
+</form>
+
+<p>&nbsp;</p>
+
+<b>Your elastic load balancers inside the region {{ zone|safe }} {{ zone_amazon|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ loadbalancertabelle|safe }}
+
+
+{% endblock %}

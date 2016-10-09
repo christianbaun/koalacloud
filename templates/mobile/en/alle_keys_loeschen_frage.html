@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+Are you absolutely sure, you want to erase <b>all</b> keys inside the Bucket <b>{{ bucketname|safe }}</b>?
+
+<table border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td align="center">
+<form action="/alle_keys_loeschen_definitiv" method="get">
+<input type="hidden" name="bucket" value="{{ bucketname|safe }}">
+<input type="hidden" name="s3_ansicht" value="{{ s3_ansicht|safe }}">
+<input type="submit" value="yes! erase all keys">
+</form>
+</td>
+<td align="center">
+<form action="/bucket_inhalt_pure" method="get">
+<input type="hidden" name="bucket" value="{{ bucketname|safe }}">
+<input type="hidden" name="s3_ansicht" value="{{ s3_ansicht|safe }}">
+<input type="submit" value="no">
+</form>
+</td>
+</tr>
+</table>
+
+{% endblock %}

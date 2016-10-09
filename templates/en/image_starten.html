@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ instanz_starten_tabelle|safe }}
+
+<p>&nbsp;</p>
+
+{{ tabelle_ec2_instanztypen|safe }}
+
+<p>&nbsp;</p>
+
+{{ t1_micro_warnung|safe }}
+
+{% endblock %}

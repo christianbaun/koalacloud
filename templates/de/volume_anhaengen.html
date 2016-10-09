@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ neues_fenster|safe }}
+
+<h3>
+<b>Volume anhaengen</b>
+</h3>
+
+<p>&nbsp;</p>
+
+{{ tabelle_anhaengen|safe }}
+
+<p>&nbsp;</p>
+
+{{ ebs_volumes_eucalyptus_warnung|safe }}
+
+{% endblock %}

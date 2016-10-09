@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/create_load_balancer" method="get" accept-charset="utf-8">
+<input type="submit" value="Neuen elastischen Lastverteiler erzeugen">
+</form>
+
+<p>&nbsp;</p>
+
+<b>Ihre elastischen Lastverteiler in der Region {{ zone|safe }} {{ zone_amazon|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ loadbalancertabelle|safe }}
+
+
+{% endblock %}

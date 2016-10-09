@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+Are you absolutely sure, you want to terminate <b>all</b> instances?
+
+<table border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td align="center">
+<form action="/alle_instanzen_beenden_definitiv" method="get">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="submit" value="yes! terminate all instances">
+</form>
+</td>
+<td align="center">
+<form action="/instanzen" method="get">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="submit" value="no">
+</form>
+</td>
+</tr>
+</table>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+Amazon erm&ouml;glicht es nicht, auf Serverseite die Liste der Images einzuschr&auml;nken. Da die Liste mehrere 1000 Images enth&auml;lt, dauert das Beziehen und Verarbeiten mehrere Sekunden. Hierbei kommt es zum Timeout.
+
+<p>&nbsp;</p>
+
+Sie k&ouml;nnen hier aber eine Liste mit Ihnen bekannten Favoriten-AMI verwalten und &uuml;ber diese Favoriten-Liste Instanzen starten.
+
+<p>&nbsp;</p>
+
+<h3>
+<b>Ihre Favoriten (AMIs) in der Zone {{ zone_in_der_wir_uns_befinden|safe }}</b>
+</h3>
+
+<p>&nbsp;</p>
+
+<form action="/favoritamierzeugen" method="post" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="hidden" name="zone" value="{{ zone_in_der_wir_uns_befinden|safe }}">
+<input name="ami" type="text" size="12" maxlength="12">
+<input type="submit" value="Favorit erzeugen">
+</form>
+
+<p>Bitte verwenden Sie dieses Schema: <tt>ami-12345678</tt></p>
+
+{{ input_error_message|safe }}
+
+<p>&nbsp;</p>
+
+{{ liste_favouriten|safe }}
+
+<!--
+<p>&nbsp;</p>
+
+<h3><b>AMIs für den Schnellstart</b></h3>
+
+<p>&nbsp;</p>
+
+{{ quickstart_tabelle|safe }}
+-->
+
+{% endblock %}

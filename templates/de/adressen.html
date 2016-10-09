@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/allocate_address" method="post" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="submit" value="Neue elastische IP erzeugen">
+</form>
+
+<p>&nbsp;</p>
+
+<b>Liste Ihrer elastischen IP-Adressen in der Region {{ zone|safe }} {{ zone_amazon|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ adressentabelle|safe }}
+
+
+{% endblock %}

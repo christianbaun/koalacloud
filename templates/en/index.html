@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<b>Your credentials</b>
+
+<p>&nbsp;</p>
+
+{{ tabelle_logins|safe }}
+
+<p>&nbsp;</p>
+
+<b>Import you credentials</b>
+
+<p>&nbsp;</p>
+
+<p><font color="green">Here you can import your credentials</font></p>
+
+<table border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="ec2">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">Amazon Web Services</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="HP">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">HP Cloud Services</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="GoogleStorage">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">Google Storage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="HostEuropeCloudStorage">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">Host Europe Cloud Storage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="DunkelCloudStorage">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">Dunkel Cloud Storage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="eucalyptus">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">Eucalyptus</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="nimbus">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">Nimbus</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="opennebula">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="create account">
+      </form>
+    </td>
+    <td align="left">OpenNebula</td>
+  </tr>
+</table>
+
+{{ eingabefelder|safe }}
+
+{{ input_error_message|safe }}
+
+{{ version_warnung|safe }}
+
+{{ port_warnung|safe }}
+
+<p>&nbsp;</p>
+
+<b>Erase your personal data inside KOALA</b>
+
+<table border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center">
+      <form action="/persoenliche_datan_loeschen" method="get">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="erase all your personal data in KOALA">
+      </form>
+    </td>
+  </tr>
+</table>
+
+<table border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center">
+      <form action="/persoenliche_favoriten_loeschen" method="get">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="erase only your EC2 favorites in KOALA">
+      </form>
+    </td>
+  </tr>
+</table>
+
+
+{% endblock %}

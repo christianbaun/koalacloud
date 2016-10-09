@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/bucketerzeugen" method="post" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td>
+<input name="bucketname" type="text" size="60" maxlength="60">
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="Neuen Bucket erzeugen">
+</td>
+</tr>
+</table>
+</form>
+
+<p>&nbsp;</p>
+
+<b>Ihre Buckets in der Region {{ zone|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ bucketstabelle|safe }}
+
+<p>&nbsp;</p>
+
+KOALA unterst&uuml;tzt eine reine S3-Darstellung eine Komfort-Darstellung. Die reine Darstellung gibt den Inhalt der Buckets exakt wieder. Da S3 ein flacher Namensraum ist, existieren in S3 keine Verzeichnisse, sondern nur Keys. Die Komfort-Darstellung emuliert Verzeichnisse wie <a href="http://www.s3fox.net" style="color:blue">S3Fox</a> es macht. Bestimmte Keys dienen als Platzhalter f&uuml;r Verzeichnisse. Diese enden auf den Namen <b>_$folder$</b>. Ein Key, der einem Verzeichnis zugeordnet werden soll, hat das Namensschema: <b>verzeichnis/unterverzeichnis/dateiname</b>
+
+<p>&nbsp;</p>
+
+Um den Anforderungen von Amazon S3 und DNS zu entsprechen, m&uuml;ssen die Namen von Buckets den folgenden Kriterien gen&uuml;gen:
+
+<p>&nbsp;</p>
+
+<ul>
+<li>Der Name kann Kleinbuchstaben, Zahlen, Punkte (.) und Bindestriche (-) enthalten</li>
+<li>Der Name muss mit einer Zahl oder einem Buchstaben anfangen</li>
+<li>Der Name sollte zwischen 3 und 63 Zeichen lang sein</li>
+<li>Der Name darf nicht wie eine IP-Adresse formatiert sein (z.B. 192.168.5.4)</li>
+<li>Der Name sollte nicht mit einem Bindestrich enden</li>
+<li>Der Name darf keine zwei direkt benachbarten Punkte or Bindestriche enthalten</li>
+<li>Der Name darf keine Punkte und Bindestriche direkt nebeneinander enthalten (z.B. "my-.bucket.com" und "my.-bucket" sind ung&uuml;ltig)</li>
+</ul>
+
+{% endblock %}

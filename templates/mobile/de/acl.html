@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td align="right"><b>Bucket:</b></td>
+<td>{{ bucketname|safe }}</td>
+</tr>
+<tr>
+<td align="right"><b>Objekt:</b></td>
+<td>{{ keyname|safe }}</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+{{ acl_tabelle|safe }}
+
+<p>&nbsp;</p>
+
+<form action="/acl_aendern" method="post" accept-charset="utf-8">
+<input type="hidden" name="keyname" value="{{ keyname|safe }}">
+<input type="hidden" name="bucketname" value="{{ bucketname|safe }}">
+<input type="hidden" name="typ" value="{{ typ|safe }}">
+<input type="hidden" name="dir" value="{{ directory|safe }}">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+  <td>
+    <select name="canned_acl" size="1">
+      <option selected="selected">public-read</option>
+      <option>private</option>
+      <option>public-read-write</option>
+      <option>authenticated-read</option>
+    </select>
+  </td>
+</tr>
+<tr>
+  <td><input type="submit" value="Zugriffsberechtigung &auml;ndern"></td>
+</tr>
+</table>
+</form>
+
+<p>&nbsp;</p>
+
+{{ eucalyptus_warnung|safe }}
+
+{% endblock %}

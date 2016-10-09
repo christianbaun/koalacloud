@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/grupperegelanlegen" method="post" accept-charset="utf-8">
+<input type="hidden" name="gruppe" value="{{ gruppe|safe }}">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+  <td align="right">Protocol:</td>
+  <td><select name="protokoll" size="1">
+        <option selected="selected">TCP</option>
+        <option>UDP</option>
+        <option>ICMP</option>
+      </select>
+  </td>
+  <td align="right">From Port:</td>
+  <td><input name="port_from" type="text" size="5" maxlength="5"></td>
+  <td align="right">To Port:</td>
+  <td><input name="port_to" type="text" size="5" maxlength="5"></td>
+</tr>
+<tr>
+  <td colspan="6" align="left"><input type="submit" value="create new rule"></td>
+</tr>
+</table>
+</form>
+
+<p>&nbsp;</p>
+
+<b>Rules inside the security group {{ gruppe|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ regelntabelle|safe }}
+
+{% endblock %}

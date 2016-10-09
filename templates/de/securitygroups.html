@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/gruppenerzeugen" method="post" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+  <td align="right">Name:</td>
+  <td><input name="gruppenname" type="text" size="40" maxlength="40"></td>
+</tr>
+<tr>
+  <td align="right">Beschreibung:</td>
+  <td><input name="gruppenbeschreibung" type="text" size="40" maxlength="40"></td>
+</tr>
+<tr>
+  <td colspan="2"><input type="submit" value="Neue Sicherheitsgruppe anlegen"></td>
+</tr>
+</table>
+</form>
+
+<p>&nbsp;</p>
+
+<b>Ihre Sicherheitsgruppen in der Region {{ zone|safe }} {{ zone_amazon|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ securitygroupsliste|safe }}
+
+{% endblock %}

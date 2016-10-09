@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+<h2><b>Information about the KOALA Cloud Manager</b></h2>
+
+<p>&nbsp;</p>
+
+The application allows to manage Cloud infrastructures (IaaS) that are compatible to Amazon Web Services (AWS). Besides <a style="color:blue" href="http://aws.amazon.com">Amazon AWS</a> private cloud infrastructures based on <a style="color:blue" href="http://open.eucalyptus.com">Eucalyptus</a>, <a style="color:blue" href="http://opennebula.org">OpenNebula</a> and <a style="color:blue" href="http://www.nimbusproject.org">Nimbus</a> are supported.
+
+<p>&nbsp;</p>
+
+<!--
+<b>Beware!</b> The usage of KOALA is without cost. But using the cloud resources inside the Amazon Elastic Compute Cloud (EC2) is <b>not</b> for free! If you loose money because of faulty handling the amazon resources or because of bugs inside KOALA, it's your liability. Neither the cloud provider Amazon or Google, nor the developers of KOALA have any liability for this.
+-->
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+KOALA is Open Source and licensed according to the <a style="color:blue" href="http://www.opensource.org/licenses/apache2.0.php">Apache License, Version 2.0</a>.
+-->
+
+<!--<p>&nbsp;</p>-->
+
+The source code and documentation is available at the <a style="color:blue" href="http://code.google.com/p/koalacloud/">KOALA project site</a>.
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+This application uses <a style="color:blue" href="http://code.google.com/p/boto/">boto</a>, a Python interface to Amazon Web Services.
+-->
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+This application runs inside the <a style="color:blue" href="http://appengine.google.com">Google App Engine</a> (GAE) and <a style="color:blue" href="http://appscale.cs.ucsb.edu">AppScale</a>.
+-->
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+<a href="http://appengine.google.com" style="text-decoration: none"><img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif"
+alt="Powered by Google App Engine" border="0"></a>
+-->
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+The icons used are from the Basic Set package from <a style="color:blue" href="http://www.pixel-mixer.com">PixelMixer</a>.
+-->
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+All pages of this application have been successfully checked with the <a style="color:blue" href="http://validator.w3.org">W3C Markup Validation Service</a> as HTML 4.01 Transitional.
+-->
+
+<!--<p>&nbsp;</p>-->
+
+<!--
+<a href="http://validator.w3.org/check?uri=referer"><img src="bilder/valid-html401.png" alt="Valid HTML 4.01 Transitional" border="0" height="31" width="88"></a>
+-->
+
+<p>&nbsp;</p>
+
+<!-- <b>The application is under development.</b> -->
+
+Please send improvement suggestion, comments and bug reports to <tt><a style="color:blue" href="mailto:koalacloudmanager@googlemail.com">koalacloudmanager@googlemail.com</a></tt>
+
+<!--
+
+<p>&nbsp;</p>
+
+<h3><b>KOALA stands for:</b></h3>
+
+<p>&nbsp;</p>
+
+<b>K</b>arlsruhe <b>O</b>pen <b>A</b>pplication (for) c<b>L</b>oud <b>A</b>dministration
+
+<p>&nbsp;</p>
+
+But the main reason for the name KOALA is, that it's easy to memorize. Furthermore <a style="color:blue" href="http://en.wikipedia.org/wiki/Koala">Koalas</a> like Eucalyptus.
+-->
+
+<!--K = Karlsruhe<BR>
+O = Organisation<BR>
+A = ?<BR>
+L = ?<BR>
+A = Anwendung<BR>-->
+
+<!--
+<p>&nbsp;</p>
+
+<h3><b>Features</B></h3>
+
+<p>&nbsp;</p>
+
+Implemented features:
+
+<p>&nbsp;</p>
+
+<ul>
+<li>Add and erase credentials for <a style="color:blue" href="http://aws.amazon.com">Amazon AWS</a>, <a style="color:blue" href="http://open.eucalyptus.com">Eucalyptus</a>, <a style="color:blue" href="http://www.nimbusproject.org">Nimbus</a> and <a style="color:blue" href="http://opennebula.org">OpenNebula</a> infrastructures</li>
+<li>Switch active region</li>
+<li>List availability zones</li>
+<li>List, create and erase security groups</li>
+<li>List, create and erase rules in security groups</li>
+<li>List, create and erase EBS volumes</li>
+<li>Attach and detach EBS volumes to/from instances</li>
+<li>List, create and erase keypairs</li>
+<li>List images</li>
+<li>List, start, reboot, stop and terminate instances</li>
+<li>Show console output of instances</li>
+<li>List, allocate and release elastic IP addresses</li>
+<li>Attach and detach elastic IP addresses to/from instances</li>
+<li>Button to erase all personal data from the datastore</li>
+<li>Define image favourites</li>
+<li>List, create and erase S3 buckets</li>
+<li>Pure S3 mode and S3 mode with more comfort</li>
+<li>List, upload and download S3 keys</li>
+<li>List and change Access Control Lists of S3 keys</li>
+<li>List, create and erase snapshots</li>
+<li>List, alter and delete elastic Load Balancers</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><b>Advantages and drawbacks of KOALA compared to other solutions</B></h3>
+
+<p>&nbsp;</p>
+
+Advantages and drawbacks of a cloud-based management application for IaaS compared to a local solution such as <a style="color:blue" href="http://s3.amazonaws.com/ec2-downloads/elasticfox.xpi">Elastifox</a> or <a style="color:blue" href="http://code.google.com/p/hybridfox/">Hybridfox</a>:
+
+<p>&nbsp;</p>
+
+<table border="1" cellspacing="0" cellpadding="5" width="750">
+<tr>
+<th width="50%">Advantages</th>
+<th width="50%">Drawbacks</th>
+</tr>
+<tr>
+<td>Support for Public Cloud (<a style="color:blue" href="http://aws.amazon.com">Amazon AWS</a>) and Private Cloud (<a style="color:blue" href="http://open.eucalyptus.com">Eucalyptus</a>, <a style="color:blue" href="http://opennebula.org">OpenNebula</a> and <a style="color:blue" href="http://www.nimbusproject.org">Nimbus</a>)</td>
+<td>Users have to trust the provider (Google) regarding privacy and availability</td>
+</tr>
+<tr>
+<td>All browsers are supported</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>No local installation needed. Lokal Installation is against the cloud paradigma</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+Advantages and drawbacks of KOALA compared to the Amazon tools such as <a style="color:blue" href="http://aws.amazon.com/console/">AWS Management Console</a>:
+
+<p>&nbsp;</p>
+
+<table border="1" cellspacing="0" cellpadding="5" width="750">
+<tr>
+<th width="50%">Advantages</th>
+<th width="50%">Drawbacks</th>
+</tr>
+<tr>
+<td>Support for Public Cloud (<a style="color:blue" href="http://aws.amazon.com">Amazon AWS</a>) and Private Cloud (<a style="color:blue" href="http://open.eucalyptus.com">Eucalyptus</a>, <a style="color:blue" href="http://opennebula.org">OpenNebula</a> and <a style="color:blue" href="http://www.nimbusproject.org">Nimbus</a>)</td>
+<td>Not all <a style="color:blue" href="http://aws.amazon.com/ec2/">EC2</a>/<a style="color:blue" href="http://aws.amazon.com/s3/">S3</a>/<a style="color:blue" href="http://aws.amazon.com/ebs/">EBS</a>/<a style="color:blue" href="http://aws.amazon.com/elasticloadbalancing/">ELB</a> features implemented</td>
+</tr>
+<tr>
+<td>KOALA itself is able to run inside an <a style="color:blue" href="http://appscale.cs.ucsb.edu">AppScale</a> Private Cloud</td>
+<td>No support from Amazon</td>
+</tr>
+</table>
+
+-->
+
+{% endblock %}

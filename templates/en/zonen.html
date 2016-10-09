@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<b>Availability zones inside the region {{ zone|safe }} {{ zone_amazon|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ zonenliste|safe }}
+
+
+{% endblock %}

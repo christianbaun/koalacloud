@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<form action="/instanzanlegen_nimbus" method="post" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="hidden" name="image_id" value="{{ image|safe }}">
+<input type="hidden" name="image_manifest" value="{{ manifest|safe }}">
+
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td align="right"><b>ID:</b></td><td>{{ image|safe }}</td>
+</tr><tr>
+<td><b>Manifest:</b></td><td>{{ manifest|safe }}</td>
+</tr>
+<tr>
+<td colspan="2" align="left"><input type="submit" value="Instanz erzeugen"> </td>
+</tr>
+</table>
+</form>
+
+{% endblock %}

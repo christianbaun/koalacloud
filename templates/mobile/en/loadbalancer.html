@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/create_load_balancer" method="get" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<input type="submit" value="create new load balancer">
+</form>
+
+<p>&nbsp;</p>
+
+<b>Your elastic load balancers</b>
+
+<p>&nbsp;</p>
+
+{{ loadbalancertabelle|safe }}
+
+
+{% endblock %}

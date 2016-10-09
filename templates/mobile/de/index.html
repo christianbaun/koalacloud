@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<b>Ihre Zugangsdaten</b>
+
+<p>&nbsp;</p>
+
+{{ tabelle_logins|safe }}
+
+<p>&nbsp;</p>
+
+<b>Ihre Zugangsdaten importieren</b>
+
+<p>&nbsp;</p>
+
+<p><font color="green">Hier k&ouml;nnen Sie ihre Zugangsdaten eintragen</font></p>
+
+<table border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="ec2">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">Amazon Web Services</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="HP">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">HP Cloud Services</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="GoogleStorage">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">Google Storage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="HostEuropeCloudStorage">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">Host Europe Cloud Storage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="DunkelCloudStorage">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">Dunkel Cloud Storage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="eucalyptus">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">Eucalyptus</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="nimbus">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">Nimbus</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="opennebula">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="left">OpenNebula</td>
+  </tr>
+</table>
+
+
+{{ eingabefelder|safe }}
+
+{{ input_error_message|safe }}
+
+{{ version_warnung|safe }}
+
+{{ port_warnung|safe }}
+
+<p>&nbsp;</p>
+
+<b>Pers&ouml;nliche Daten in KOALA l&ouml;schen</b>
+
+<table border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center">
+      <form action="/persoenliche_datan_loeschen" method="get">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Alle Ihre pers&ouml;nliche Daten aus KOALA l&ouml;schen">
+      </form>
+    </td>
+  </tr>
+</table>
+
+<table border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td align="center">
+      <form action="/persoenliche_favoriten_loeschen" method="get">
+        <input type="hidden" name="mobile" value="{{ mobile|safe }}">   
+        <input type="submit" value="Nur Ihre EC2 Favoriten in KOALA l&ouml;schen">
+      </form>
+    </td>
+  </tr>
+</table>
+
+
+{% endblock %}

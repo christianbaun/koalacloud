@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<b>Console Output of the instance {{ instance_id|safe }} inside the region {{ zone|safe }} {{ zone_amazon|safe }}</b>
+
+{{ fehlermeldung|safe }}
+
+<p>&nbsp;</p>
+
+{{ console_ausgabe|safe }}
+
+{% endblock %}

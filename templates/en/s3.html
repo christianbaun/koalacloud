@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<form action="/bucketerzeugen" method="post" accept-charset="utf-8">
+<input type="hidden" name="mobile" value="{{ mobile|safe }}">
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td>
+<input name="bucketname" type="text" size="60" maxlength="60">
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="create new bucket">
+</td>
+</tr>
+</table>
+</form>
+
+<p>&nbsp;</p>
+
+<b>Your buckets inside the region {{ zone|safe }}</b>
+
+<p>&nbsp;</p>
+
+{{ bucketstabelle|safe }}
+
+<p>&nbsp;</p>
+
+KOALA supports a pure S3 mode and a S3 mode with more comfort. The pure S3 mode presents the contend of the buckets exactly. S3 is a completely flat name space. Therefore S3 has no support for folders. However, folders can be simulated with clever use of key names. The S3 mode with more comfort uses keys that end with <b>_$folder$</b> as directory placeholders. A key that is meant staying inside are folder has a name following this schema <b>folder/subfolder/filename</b>.
+It is the same approach <a href="http://www.s3fox.net" style="color:blue">S3Fox</a> uses.
+
+<p>&nbsp;</p>
+
+To conform with Amazon S3 and DNS requirements, bucket names:
+
+<p>&nbsp;</p>
+
+<ul>
+<li>Can contain lowercase letters, numbers, periods (.) and dashes (-)</li>
+<li>Must start with a number or letter</li>
+<li>Should be between 3 and 63 characters long</li>
+<li>Must not be formatted as an IP address (e.g., 192.168.5.4)</li>
+<li>Should not end with a dash or period</li>
+<li>Cannot contain two, adjacent periods or dashes</li>
+<li>Cannot contain dashes next to periods (e.g., "my-.bucket.com" and "my.-bucket" are invalid)</li>
+</ul>
+
+{% endblock %}

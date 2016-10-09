@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+Amazon provides no ability to filter the returned list of images on the server side. The list of images contains more than 1000 images. Fetching and processing the list of images needs some seconds. This leads to a timeout of the Google App Engine.
+
+<p>&nbsp;</p>
+
+As a workaround, a list of favorite AMIs can be created by yourself and used to start instances.
+
+<p>&nbsp;</p>
+
+<h3>
+<b>Your favorite AMIs inside the zone {{ zone_in_der_wir_uns_befinden|safe }}</b>
+</h3>
+
+<p>&nbsp;</p>
+
+<form action="/favoritamierzeugen" method="post" accept-charset="utf-8">
+<input type="hidden" name="zone" value="{{ zone_in_der_wir_uns_befinden|safe }}">
+<input name="ami" type="text" size="12" maxlength="12">
+<input type="submit" value="create favorite">
+</form>
+
+<p>Please use this schema: <tt>ami-12345678</tt></p>
+
+{{ input_error_message|safe }}
+
+<p>&nbsp;</p>
+
+{{ liste_favouriten|safe }}
+
+<!--
+<p>&nbsp;</p>
+
+<h3><b>Quick start AMIs</b></h3>
+
+<p>&nbsp;</p>
+
+{{ quickstart_tabelle|safe }}
+-->
+
+{% endblock %}s

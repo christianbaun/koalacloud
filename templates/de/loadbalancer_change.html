@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message|safe }}
+
+<b>Load Balancer {{ load_balancer_name|safe }} &auml;ndern</b>
+
+<p>&nbsp;</p>
+
+<b>Verf&uuml;gbarkeitszonen</b>
+
+<p>&nbsp;</p>
+
+{{ tabelle_zonen_aendern|safe }}
+
+<p>&nbsp;</p>
+
+<b>Instanzen</b>
+
+<p>&nbsp;</p>
+
+{{ tabelle_instanz_anhaengen|safe }}
+
+{% endblock %}
