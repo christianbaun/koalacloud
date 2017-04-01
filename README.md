@@ -24,7 +24,7 @@ KOALA itself is a service that is able to run inside the public cloud platform (
 
 # How do I get started?
 
-The {Wiki](https://github.com/christianbaun/koalacloud/wiki) provides instructions on how to use KOALA that runs as a service inside the Google App Engine with the most popular Cloud Services and how to install KOALA inside a Private Cloud PaaS.
+The [Wiki](https://github.com/christianbaun/koalacloud/wiki) provides instructions on how to use KOALA that runs as a service inside the Google App Engine with the most popular Cloud Services and how to install KOALA inside a Private Cloud PaaS.
 
 **Web site of KOALA**: [http://koalacloud.appspot.com](http://koalacloud.appspot.com)
 
